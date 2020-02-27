@@ -1,0 +1,26 @@
+
+--
+-- Table structure for table 'employee'
+--
+
+CREATE TABLE public.employee
+(
+    id bigint NOT NULL,
+    first_name character varying(100) NOT NULL,
+    salary bigint NOT NULL,
+    PRIMARY KEY (id)
+)
+WITH (
+    OIDS = FALSE
+);
+
+ALTER TABLE public.employee
+    OWNER to postgres;
+
+--
+-- Data for table 'employee'
+--
+
+INSERT INTO public.employee(
+	id, first_name, salary)
+	VALUES (1,'Adam', 25000), (2,'Helen',45000), (3,'Anna',12000);
